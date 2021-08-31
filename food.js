@@ -13,7 +13,7 @@ $(document).ready(function () {
 
     // Check for the button clicked
     if ($(this).hasClass('btn-danger')) {
-      $('#cnt').find('.badge').text(val - 1);
+      $('#cnt').find('.badge').text(val = 0);
     } else if ($(this).hasClass('btn-success')) {
       $('#cnt').find('.badge').text(val + 1);
     }
