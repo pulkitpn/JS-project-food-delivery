@@ -51,7 +51,8 @@
                 <ul class="nav navbar-nav ml-auto">
 
                     <li class="nav-item">
-                        <button type="button" onclick="increment()" class="btn btn-dark" data-toggle="modal" data-target="#cart">
+                        <button type="button" onclick="increment()" class="btn btn-dark" data-toggle="modal"
+                            data-target="#cart">
                             <!-- (<span id="cnt" class="total-count">0</span>) -->
                             <span id="cnt">
                                 <i class="fas fa-cart-arrow-down"></i>
@@ -88,7 +89,7 @@
                                 <h4 class="card-title">Sandwich</h4>
                                 <p class="card-text">Price = ₹80.00</p>
                                 <a href="#" data-name="Sandwich" data-price="80.00"
-                                    class="add-to-cart btn btn-success">Add to cart</a>
+                                    class="btn btn-success shop-item-button">Add to cart</a>
                             </div>
                         </div>
                     </div>
@@ -120,7 +121,7 @@
                                 <h4 class="card-title">Sandwich</h4>
                                 <p class="card-text">Price = ₹80.00</p>
                                 <a href="#" data-name="Sandwich" data-price="80.00"
-                                    class="add-to-cart btn btn-success">Add to cart</a>
+                                    class="btn btn-success shop-item-button">Add to cart</a>
                             </div>
                         </div>
 
@@ -135,7 +136,7 @@
                                 <h4 class="card-title">Sandwich</h4>
                                 <p class="card-text">Price = ₹80.00</p>
                                 <a href="#" data-name="Sandwich" data-price="80.00"
-                                    class="add-to-cart btn btn-success">Add to cart</a>
+                                    class="btn btn-success shop-item-button">Add to cart</a>
                             </div>
                         </div>
 
@@ -156,7 +157,7 @@
                                 <h4 class="card-title">Sandwich</h4>
                                 <p class="card-text">Price = ₹80.00</p>
                                 <a href="#" data-name="Sandwich" data-price="80.00"
-                                    class="add-to-cart btn btn-success">Add to cart</a>
+                                    class="btn btn-success shop-item-button">Add to cart</a>
                             </div>
                         </div>
                     </div>
@@ -170,7 +171,7 @@
                                 <h4 class="card-title">Sandwich</h4>
                                 <p class="card-text">Price = ₹80.00</p>
                                 <a href="#" data-name="Sandwich" data-price="80.00"
-                                    class="add-to-cart btn btn-success">Add to cart</a>
+                                    class="btn btn-success shop-item-button">Add to cart</a>
                             </div>
                         </div>
                     </div>
@@ -184,7 +185,7 @@
                                 <h4 class="card-title">Sandwich</h4>
                                 <p class="card-text">Price = ₹80.00</p>
                                 <a href="#" data-name="Sandwich" data-price="80.00"
-                                    class="add-to-cart btn btn-success">Add to cart</a>
+                                    class="btn btn-success shop-item-button">Add to cart</a>
                             </div>
                         </div>
                     </div>
@@ -202,7 +203,7 @@
                                 <h4 class="card-title">Sandwich</h4>
                                 <p class="card-text">Price = ₹80.00</p>
                                 <a href="#" data-name="Sandwich" data-price="80.00"
-                                    class="add-to-cart btn btn-success">Add to cart</a>
+                                    class="btn btn-success shop-item-button">Add to cart</a>
                             </div>
                         </div>
                     </div>
@@ -216,7 +217,7 @@
                                 <h4 class="card-title">Sandwich</h4>
                                 <p class="card-text">Price = ₹80.00</p>
                                 <a href="#" data-name="Sandwich" data-price="80.00"
-                                    class="add-to-cart btn btn-success">Add to cart</a>
+                                    class="btn btn-success shop-item-button">Add to cart</a>
                             </div>
                         </div>
                     </div>
@@ -230,7 +231,7 @@
                                 <h4 class="card-title">Sandwich</h4>
                                 <p class="card-text">Price = ₹80.00</p>
                                 <a href="#" data-name="Sandwich" data-price="80.00"
-                                    class="add-to-cart btn btn-success">Add to cart</a>
+                                    class="btn btn-success shop-item-button">Add to cart</a>
                             </div>
                         </div>
 
@@ -253,26 +254,33 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <table class="show-cart table">
-
-                        </table>
-                        <div>Total price: ₹<span class="total-cart"></span></div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-danger">Order now</button>
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">ITEM</span>
+                            <span class="cart-price cart-header cart-column">PRICE</span>
+                            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                        </div>
+                        <div class="cart-items">
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Total</strong>
+                            <span class="cart-total-price">₹0</span>
+                        </div>
+                        <!-- <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button> -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-danger btn-purchase">Order now</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <hr>
-        <footer>Created By: Pulkit Nagar | ©- 2021 Copyright
-            <aside style="text-align: right;">
-                Contact for more details.
-            </aside>
-        </footer>
-    </div>
+            <hr>
+            <footer>Created By: Pulkit Nagar | ©- 2021 Copyright
+                <aside style="text-align: right;">
+                    Contact for more details.
+                </aside>
+            </footer>
+        </div>
 </body>
 
 </html>
