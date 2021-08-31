@@ -7,18 +7,18 @@ function closeNav() {
 }
 
 
-// $(document).ready(function() {
-//   $(".btn").click(function() {
-//       var val = parseInt($('#cnt').find('.badge').text());
+$(document).ready(function () {
+  $(".btn").click(function () {
+    var val = parseInt($('#cnt').find('.badge').text());
 
-//       // Check for the button clicked
-//       if ($(this).hasClass('btn-danger')) {
-//           $('#cnt').find('.badge').text(val - 1);
-//       } else if ($(this).hasClass('btn-success')) {
-//           $('#cnt').find('.badge').text(val + 1);
-//       }
-//   });
-// });
+    // Check for the button clicked
+    if ($(this).hasClass('btn-danger')) {
+      $('#cnt').find('.badge').text(val - 1);
+    } else if ($(this).hasClass('btn-success')) {
+      $('#cnt').find('.badge').text(val + 1);
+    }
+  });
+});
 
 if (document.readyState == 'loading') {
   document.addEventListener('DOMContentLoaded', ready)
@@ -100,11 +100,11 @@ function addItemToCart(title, price, imageSrc) {
       <span class="cart-price cart-column">${price}</span>
       <div class="cart-quantity cart-column">
           <input class="cart-quantity-input" type="number" value="1">
-          <button class="btn btn-danger" type="button">REMOVE</button>
+          <button class="btn btn-warning" type="button">REMOVE</button>
       </div>`
   cartRow.innerHTML = cartRowContents
   cartItems.append(cartRow)
-  cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
+  cartRow.getElementsByClassName('btn-warning')[0].addEventListener('click', removeCartItem)
   cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
 }
 
@@ -116,12 +116,12 @@ function updateCartTotal() {
     var cartRow = cartRows[i]
     var priceElement = cartRow.getElementsByClassName('cart-price')[0]
     var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
-    var price = parseFloat(priceElement.innerText.replace('$', ''))
+    var price = parseFloat(priceElement.innerText.replace('₹', ''))
     var quantity = quantityElement.value
     total = total + (price * quantity)
   }
   total = Math.round(total * 100) / 100
-  document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
+  document.getElementsByClassName('cart-total-price')[0].innerText = '₹' + total
 }
 
 
