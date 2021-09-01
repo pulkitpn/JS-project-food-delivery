@@ -121,6 +121,20 @@ p1{
     width: 35%;
 }
 
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    /* width: 75px;
+    height: auto; */
+    width: auto;
+    height: 72px;
+    border-radius: 10px;
+}
+
 .btn-danger {
     color: white;
     background-color: #EB5757;

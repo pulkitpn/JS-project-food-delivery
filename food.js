@@ -18,7 +18,6 @@ $(document).ready(function () {
       $('#cnt').find('.badge').text(val + 1);
     } else if ($(this).hasClass('btn-warning')) {
       $('#cnt').find('.badge').text(val - 1);
-      console.log("maac chudiiiii")
     }
   });
 });
