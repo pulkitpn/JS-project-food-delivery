@@ -16,6 +16,9 @@ $(document).ready(function () {
       $('#cnt').find('.badge').text(val = 0);
     } else if ($(this).hasClass('btn-success')) {
       $('#cnt').find('.badge').text(val + 1);
+    } else if ($(this).hasClass('btn-warning')) {
+      $('#cnt').find('.badge').text(val - 1);
+      console.log("maac chudiiiii")
     }
   });
 });
@@ -79,6 +82,7 @@ function addToCartClicked(event) {
   var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
   addItemToCart(title, price, imageSrc)
   updateCartTotal()
+
 }
 
 function addItemToCart(title, price, imageSrc) {
@@ -120,7 +124,7 @@ function updateCartTotal() {
     var quantity = quantityElement.value
     total = total + (price * quantity)
   }
-  total = Math.round(total * 100) / 100
+  total = Math.round((total * 100) / 100)
   document.getElementsByClassName('cart-total-price')[0].innerText = '₹' + total
 }
 
