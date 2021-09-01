@@ -16,9 +16,7 @@ $(document).ready(function () {
       $('#cnt').find('.badge').text(val = 0);
     } else if ($(this).hasClass('btn-success')) {
       $('#cnt').find('.badge').text(val + 1);
-    } else if ($(this).hasClass('btn-warning')) {
-      $('#cnt').find('.badge').text(val - 1);
-    }
+    } 
   });
 });
 
